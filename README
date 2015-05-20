@@ -5,5 +5,8 @@ export FFTW='/opt/fftw'
 export GMP='/opt/gmp'
 export SPRNG='/home/boruoshihao/sprng/sprng2.0'
 export MKL='/opt/intel/mkl'
+export ACML='/usr/local/acml-5.1.0/'
+export MAGMA='/usr/local/intel64/nehalem/magma-1.3.0'
+export LIBHAO='~/lib_hao/mpi'
 
-Check your environment variables, some might already been defined, e.g. echo ${FFTW}
+Check your environment variables first, some might already been defined (e.g. you use "module load fftw" in a cluster, "echo ${FFTW}" will show that FFTW is defined).
