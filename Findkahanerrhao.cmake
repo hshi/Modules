@@ -1,5 +1,5 @@
 #Try to find kahanerrhao
-set(kahanerrhao_path "$ENV{LIBHAO}")
+set(libhao_path "$ENV{LIBHAO}")
 find_library(kahanerrhao_libraries   NAMES  libkahanerrhao.a    PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 find_path(kahanerrhao_include_dirs kahan.h PATHS "${libhao_path}/include" NO_DEFAULT_PATH)
 

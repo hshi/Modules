@@ -1,5 +1,5 @@
 #Try to find matrixhao
-set(matrixhao_path "$ENV{LIBHAO}")
+set(libhao_path "$ENV{LIBHAO}")
 find_library(matrixhao_libraries   NAMES  libmatrixhao.a    PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 find_path(matrixhao_include_dirs matrix_all.h PATHS "${libhao_path}/include" NO_DEFAULT_PATH)
 

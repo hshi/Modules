@@ -1,5 +1,5 @@
 #Try to find mpihao
-set(mpihao_path "$ENV{LIBHAO}")
+set(libhao_path "$ENV{LIBHAO}")
 find_library(mpihao_libraries   NAMES  libmpihao.a    PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 find_path(mpihao_include_dirs mpi_fun.h PATHS "${libhao_path}/include" NO_DEFAULT_PATH)
 
