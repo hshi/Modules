@@ -9,7 +9,7 @@ find_library(mpihao_libraries          NAMES  libmpihao.a            PATHS "${li
 find_library(randomhao_libraries       NAMES  librandomhao.a         PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 find_library(timehao_libraries         NAMES  libtimehao.a           PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 find_library(threadmcdatahao_libraries NAMES  libthreadmcdatahao.a   PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
-find_library(popcontrolhao_libraries   NAMES  libpopcontrol.a        PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
+find_library(popcontrolhao_libraries   NAMES  libpopcontrolhao.a     PATHS "${libhao_path}/lib" NO_DEFAULT_PATH)
 set(libhao_libraries ${popcontrolhao_libraries} ${threadmcdatahao_libraries} ${fftwhao_libraries} ${kahanerrhao_libraries} 
                      ${latticehao_libraries}    ${mathhao_libraries} ${matrixhao_libraries} ${mpihao_libraries} ${randomhao_libraries} 
                      ${timehao_libraries} )
