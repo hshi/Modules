@@ -1,7 +1,6 @@
 #Try to find gmp
-set(gmp_path "$ENV{GMP}")
-find_library(gmp_libraries NAMES libgmp.a PATHS "${gmp_path}/lib")
-find_path(gmp_include_dirs gmp.h PATHS "${gmp_path}/include")
+find_library(gmp_libraries NAMES libgmp.a HINTS "$ENV{GMP}/lib" "$ENV{GMPHOME}/lib")
+find_path(gmp_include_dirs gmp.h HINTS "$ENV{GMP}/include" "$ENV{GMPHOME}/include")
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(gmp  DEFAULT_MSG
@@ -9,5 +8,5 @@ find_package_handle_standard_args(gmp  DEFAULT_MSG
 mark_as_advanced(gmp_include_dirs gmp_libraries)
 
 if(NOT GMP_FOUND)
-  MESSAGE ("-- In order to find gmp, please define GMP='/path/to/gmp' ")
+  MESSAGE ("-- In order to find gmp, please define GMP or GMPHOME, GMP='/path/to/gmp' ")
 endif()

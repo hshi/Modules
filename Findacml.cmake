@@ -1,9 +1,6 @@
 #Try to find acml
-
-# MESSAGE("? ACML = $ENV{ACML}")
-set(acml_path "$ENV{ACML}")
-find_library(acml_libraries NAMES libacml.a libacml_mp.a PATHS "${acml_path}/lib64" "${acml_path}/lib")
-find_path(acml_include_dirs acml.h PATHS "${acml_path}/include")
+find_library(acml_libraries NAMES libacml.a libacml_mp.a HINTS "$ENV{ACML}/lib64" "$ENV{ACML}/lib" "$ENV{ACMLHOME}/lib64" "$ENV{ACMLHOME}/lib")
+find_path(acml_include_dirs acml.h HINTS "$ENV{ACML}/include" "$ENV{ACMLHOME}/include")
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(acml  DEFAULT_MSG
@@ -11,5 +8,5 @@ find_package_handle_standard_args(acml  DEFAULT_MSG
 mark_as_advanced(acml_include_dirs acml_libraries)
 
 if(NOT ACML_FOUND)
-  MESSAGE ("-- In order to find acml, please define ACML='/path/to/acml' ")
+  MESSAGE ("-- In order to find acml, please define ACML or ACMLHOME, ACML='/path/to/acml' ")
 endif()
