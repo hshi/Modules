@@ -2,7 +2,7 @@
 find_library(lp64_libraries NAMES mkl_intel_lp64 HINTS "$ENV{MKL}/lib/intel64" "$ENV{MKLHOME}/lib/intel64")
 find_library(core_libraries NAMES mkl_core HINTS "$ENV{MKL}/lib/intel64" "$ENV{MKLHOME}/lib/intel64")
 find_library(sequential_libraries NAMES mkl_sequential HINTS "$ENV{MKL}/lib/intel64" "$ENV{MKLHOME}/lib/intel64")
-set(mkl_libraries ${lp64_libraries} ${core_libraries} ${sequential_libraries})
+set(mkl_libraries ${lp64_libraries} ${core_libraries} ${sequential_libraries} m dl pthread)
 
 find_path(mkl_include_dirs mkl.h HINTS "$ENV{MKL}/include" "$ENV{MKLHOME}/include")
 
